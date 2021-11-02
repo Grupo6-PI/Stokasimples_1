@@ -15,3 +15,5 @@ https://preettheman.medium.com/lets-build-an-e-commerce-website-with-python-flas
 está disponível no GitHub:
 
 https://github.com/HarshShah1997/Shopping-Cart
+
+teste de atualização com o git (02/11 - 7h38)
