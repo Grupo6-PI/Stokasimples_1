@@ -8,7 +8,7 @@
 <body>
 <div id="title">
 	<a href="/">
-		<img id="logo" src= {{ url_for('static', filename='images/logo.png') }} />
+		<img id="logo" src= {{ url_for('static', filename='images/stoka_logo.jpeg') }} />
 	</a>
 	<form>
 		<input id="searchBox" type="text" name="searchQuery">
@@ -17,7 +17,7 @@
 
 	{% if not loggedIn %}
 	<div id="signInButton">
-		<a class="link" href="/loginForm">Sign In</a>
+		<a class="link" href="/loginForm">Entrar</a>
 	</div>
 	{% else %}
 	<div class="dropdown">
@@ -32,8 +32,8 @@
 	{% endif %}
 	<div id="kart">
 		<a class="link" href="/cart">
-			<img src={{url_for('static', filename='images/shoppingCart.png')}} id="cartIcon" />
-			CART {{noOfItems}}
+			<img src={{url_for('static', filename='images/carrinho2.png')}} id="cartIcon" />
+			Carrinho {{noOfItems}}
 		</a>
 	</div>
 </div>
@@ -46,26 +46,26 @@
 	</div>
 
 	<div id="productDescription">
-		<h2>Details</h2>
+		<h2>Detalhes</h2>
 		<table id="descriptionTable">
 			<tr>
-				<td>Name</td>
+				<td>Nome</td>
 				<td>{{data[1]}}</td>
 			</tr>
 			<tr>
-				<td>Price</td>
-				<td>${{data[2]}}</td>
+				<td>Preço</td>
+				<td>R${{data[2]}}</td>
 			</tr>
 			<tr>
-				<td>Stock</td>
+				<td>Quantidade disponível</td>
 				<td>{{data[5]}}</td>
 			</tr>
 		</table>
-		<h2>Description</h2>
+		<h2>Descrição</h2>
 		<p>{{data[3]}}</p>
 	</div>
 	<div id="addToCart">
-		<a href="/addToCart?productId={{request.args.get('productId')}}">Add to Cart</a>
+		<a href="/addToCart?productId={{request.args.get('productId')}}">Levar pra casa</a>
 	</div>
 </div>
 </body>

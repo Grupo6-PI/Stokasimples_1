@@ -21,7 +21,7 @@
 		</div>
 	{% else %}
 	<div class="dropdown">
-		<button class="dropbtn">Hello, <br>{{firstName}}</button>
+		<button class="dropbtn">Seja muito bem-vindo, <br>{{firstName}}</button>
 		<div class="dropdown-content">
 			<a href="/account/orders">Your orders</a>
 			<a href="/account/profile">Your profile</a>
@@ -32,8 +32,8 @@
 	{% endif %}
 	<div id="kart">
 		<a class="link" href="/cart">
-		<img src={{url_for('static', filename='images/shoppingCart.png')}} id="cartIcon" />
-		CART {{noOfItems}}
+		<img src={{url_for('static', filename='images/carrinho2.png')}} id="cartIcon" />
+		Carrinho {{noOfItems}}
 		</a>
 	</div>
 </div>

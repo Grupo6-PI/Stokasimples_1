@@ -32,11 +32,11 @@
 
 	{% if not loggedIn %}
 	<div id="signInButton">
-		<a class="link" href="/loginForm">Sign In</a>
+		<a class="link" href="/loginForm">Entrar</a>
 	</div>
 	{% else %}
 	<div class="dropdown">
-		<button class="dropbtn">Hello, <br>{{firstName}}</button>
+		<button class="dropbtn">Seja muito bem-vindo, <br>{{firstName}}</button>
 		<div class="dropdown-content">
 			<a href="/account/orders">Your orders</a>
 			<a href="/account/profile">Your profile</a>
@@ -47,14 +47,14 @@
 	{% endif %}
 	<div id="kart">
 		<a class="link" href="/cart">
-			<img src={{url_for('static', filename='images/shoppingCart.png')}} id="cartIcon" />
-			CART {{noOfItems}}
+			<img src={{url_for('static', filename='images/carrinho2.png')}} id="cartIcon" />
+			Carrinho {{noOfItems}}
 		</a>
 	</div>
 </div>
 <div class="display">
 	<div class="displayCategory">
-		<h2>Shop by Category: </h2>
+		<h2>Compre por categoria: </h2>
 		<ul>
 			{% for row in categoryData %}
 			<li><a href="/displayCategory?categoryId={{row[0]}}">{{row[1]}}</a></li>
@@ -62,7 +62,7 @@
 		</ul>
 	</div>
 	<div>
-		<h2>Items</h2>
+		<h2>Itens em destaque</h2>
 		{% for data in itemData %}
 		<table>
 			<tr id="productName">
@@ -84,7 +84,7 @@
 			<tr id="productPrice">
 				{% for row in data %}
 				<td>
-					${{row[2]}}
+					R${{row[2]}}
 				</td>
 				{% endfor %}
 			</tr>
