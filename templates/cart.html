@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Your Cart</title>
+<title>Carrinho de compras</title>
 <link rel="stylesheet" href={{url_for('static', filename='css/cart.css')}} />
 <link rel="stylesheet" href={{url_for('static', filename='css/topStyle.css') }} />
 </head>
@@ -17,16 +17,16 @@
 
 	{% if not loggedIn %}
 		<div id="signInButton">
-			<a class="link" href="/loginForm">Sign In</a>
+			<a class="link" href="/loginForm">Entrar</a>
 		</div>
 	{% else %}
 	<div class="dropdown">
 		<button class="dropbtn">Seja muito bem-vindo, <br>{{firstName}}</button>
 		<div class="dropdown-content">
-			<a href="/account/orders">Your orders</a>
-			<a href="/account/profile">Your profile</a>
+			<a href="/account/orders">Meus pedidos</a>
+			<a href="/account/profile">Meu perfil</a>
 			<hr>
-			<a href="/logout">Sign Out</a>
+			<a href="/logout">Sair</a>
 		</div>
 	</div>
 	{% endif %}
@@ -49,7 +49,7 @@
 			<div id="itemName">
 				<span id="itemNameTag">{{row[1]}}</span><br>
 				In stock<br>
-				<a href="/removeFromCart?productId={{row[0]}}">Remove</a>
+				<a href="/removeFromCart?productId={{row[0]}}">Cancelar</a>
 			</div>
 			<div id="itemPrice">
 				${{row[2]}}
@@ -58,11 +58,11 @@
 		{% endfor %}
 		<hr id="seperator">
 		<div id="total">
-			<span id="subtotal">Subtotal</span> : ${{totalPrice}}
+			<span id="subtotal">Subtotal</span> : R${{totalPrice}}
 		</div>
 	</div>
 </div>
-<a href="/checkout">Proceed to checkout</a>
+<a href="/checkout">Sair</a>
 </body>
 </html>
 
