@@ -1,6 +1,6 @@
 #logo {
-	height: 100px;
-	width: 160px;
+	height: 150px;
+	width: 210px;
 	margin-left: 20px;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -8,15 +8,24 @@
 	float: left;
 }
 
+
+
 #title {
 	background-color: rgba(245, 245, 245, 0.938);
 	display: inline-block;
 	width: 100%;
+	text-decoration-color: blue;
 }
+
+#slogan{
+	font: italic small-caps normal 18px/1.3em Arial, sans-serif;
+	margin-top: 70px;
+}
+
 
 #searchBox {
 	height: 20px;
-	width: 800px;
+	width: 200px;
 	margin-left: 20px;
 	margin-top: 85px;
 	margin-bottom: 20px;
@@ -75,7 +84,7 @@
 
 #signInButton {
 	color: yellow;
-	margin-top: 35px;
+	margin-top: 22px;
 	margin-bottom: 20px;
 	margin-left: 20px;
 	margin-right: 20px;
@@ -83,7 +92,7 @@
 }
 #kart {
 	color: white;
-	margin-top: 20px;
+	margin-top: 8px;
 	margin-bottom: 20px;
 	margin-left: 20px;
 	margin-right: 20px;

@@ -25,11 +25,11 @@
 	<a href="/">
 		<img id="logo" src= {{ url_for('static', filename='images/stoka_logo.jpeg') }} />
 	</a>
-	<h2>A sua casa de música</h2>
-	<form>
+	<div id=slogan><h1>A sua casa de música</h1></div>
+	<!--<form>
 		<input id="searchBox" type="text" name="searchQuery">
 		<input id="searchButton" type="submit" value="Pesquisar">
-	</form>
+	</form> -->
 
 	{% if not loggedIn %}
 	<div id="signInButton">
@@ -39,10 +39,10 @@
 	<div class="dropdown">
 		<button class="dropbtn">Seja muito bem-vindo, <br>{{firstName}}</button>
 		<div class="dropdown-content">
-			<a href="/account/orders">Your orders</a>
-			<a href="/account/profile">Your profile</a>
+			<a href="/account/orders">Seus pedidos</a>
+			<a href="/account/profile">Seu perfil</a>
 			<hr>
-			<a href="/logout">Sign Out</a>
+			<a href="/logout">Sair</a>
 		</div>
 	</div>
 	{% endif %}
@@ -53,6 +53,9 @@
 		</a>
 	</div>
 </div>
+
+<!-- até aqui é a parte de cima -->
+
 <div class="display">
 	<div class="displayCategory">
 		<h2>Compre por categoria: </h2>

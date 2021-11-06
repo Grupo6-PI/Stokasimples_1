@@ -1,4 +1,8 @@
 
+body {
+	background-color:  rgba(245, 245, 245, 0.938);	
+}
+
 
 #itemImage {
 	height: 200px;
@@ -6,6 +10,7 @@
 }
 
 .display {
+	background-color: rgba(245, 245, 245, 0.938);
 	margin-top: 20px;
 	margin-left: 20px;
 	margin-right: 20px;

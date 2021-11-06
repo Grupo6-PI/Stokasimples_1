@@ -201,7 +201,7 @@ def login():
             session['email'] = email
             return redirect(url_for('root'))
         else:
-            error = 'Invalid UserId / Password'
+            error = 'Ususário ou senha inválidos'
             return render_template('login.html', error=error)
 
 @app.route('/productDescription')
