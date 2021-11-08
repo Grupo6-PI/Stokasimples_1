@@ -36,6 +36,28 @@ def root():
     itemData = parse(itemData)
     return render_template('home.html', itemData=itemData, loggedIn=loggedIn, firstName=firstName, noOfItems=noOfItems, categoryData=categoryData)
 
+
+#video aulas
+
+@app.route('/classes')
+def classes():
+    loggedIn, firstName, noOfItems = getLoginDetails()
+    with sqlite3.connect('database.db') as conn:
+        cur = conn.cursor()
+        cur.execute('SELECT productId, name, price, description, image, stock FROM products')
+        itemData = cur.fetchall()
+        cur.execute('SELECT categoryId, name FROM categories')
+        categoryData = cur.fetchall()
+    itemData = parse(itemData)
+    return render_template('classes.html',  itemData=itemData, loggedIn=loggedIn, firstName=firstName, noOfItems=noOfItems, categoryData=categoryData)
+
+
+#fim de video aulas
+
+
+
+
+
 @app.route('/add')
 def admin():
     with sqlite3.connect('database.db') as conn:

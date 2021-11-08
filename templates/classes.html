@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Stokamusik</title>
+
+<!-- mais uma tentativa-->
+
+
+
+<!-- mais uma tentativa-->
+
+
+<link rel="stylesheet" href={{ url_for('static', filename='css/home.css') }} />
+<link rel="stylesheet" href={{ url_for('static', filename='css/topStyle.css') }} />
+<link rel="stylesheet" href={{ url_for('static', filename='css/videos.css') }} />
+
+</head>
+
+<body>
+
+	<div style="background-image: url('images/stoka_fundo.jpeg');"></div>
+	
+
+
+	<div id="title">
+	<a href="/">
+		<img id="logo" src= {{ url_for('static', filename='images/stoka_logo.jpeg') }} />
+	</a>
+	<div id=slogan><h1>A sua casa de Música</h1></div>
+	<!--<form>
+		<input id="searchBox" type="text" name="searchQuery">
+		<input id="searchButton" type="submit" value="Pesquisar">
+	</form> -->
+
+	{% if not loggedIn %}
+	<div id="signInButton">
+		<a class="link" href="/loginForm">Entrar</a>
+	</div>
+	{% else %}
+	<div class="dropdown">
+		<button class="dropbtn">Seja muito bem-vindo, <br>{{firstName}}</button>
+		<div class="dropdown-content">
+			<a href="/account/orders">Seus pedidos</a>
+			<a href="/account/profile">Seu perfil</a>
+			<hr>
+			<a href="/logout">Sair</a>
+		</div>
+	</div>
+	{% endif %}
+	<div id="kart">
+		<a class="link" href="/cart">
+			<img src={{url_for('static', filename='images/carrinho2.png')}} id="cartIcon" />
+			Carrinho {{noOfItems}}
+		</a>
+	</div>
+</div>
+
+<!-- até aqui é a parte de cima -->
+
+<div>
+    <div id=slogan><h2>Video aulas</h2></div>
+    
+    <table>
+        <tr id="videos">
+            <td>
+                <video controls src={{url_for('static', filename='video/halley 1.mp4')}} width="320" height="240"></video>
+                <video controls src={{url_for('static', filename='video/halley 2.mp4')}} width="320" height="240"></video>
+                <video controls src={{url_for('static', filename='video/halley 3.mp4')}} width="320" height="240"></video>
+            </td>         
+        </tr>
+    </table>
+</div>
+</body>
+</html>

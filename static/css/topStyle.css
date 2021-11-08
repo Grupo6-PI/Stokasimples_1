@@ -104,3 +104,21 @@
 	width: 30px;
 }
 
+#videoclass {
+	color: rgb(3, 3, 3);
+	margin-top: 8px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	float: left;
+}
+
+#slogan{
+	font: italic small-caps normal 18px/1.3em Arial, sans-serif;
+	margin-top: 70px;
+}
+
+#maestro {
+	height: 100px;
+	width: 100px;
+}
