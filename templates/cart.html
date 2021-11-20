@@ -7,6 +7,8 @@
 </head>
 <body>
 <div id="title">
+	
+	<!--
 	<a href="/">
 	<img id="logo" src= {{ url_for('static', filename='images/stoka_logo.jpeg') }} />
 	</a>
@@ -35,7 +37,41 @@
 		<img src={{url_for('static', filename='images/carrinho2.png')}} id="cartIcon" />
 		Carrinho {{noOfItems}}
 		</a>
+	</div> -->
+	
+	
+	<a href="/">
+		<img id="logo" src= {{ url_for('static', filename='images/stoka_logo.jpeg') }} />
+	</a>
+	<div id=slogan><h1>A sua casa de Música</h1></div>
+	<!--<form>
+		<input id="searchBox" type="text" name="searchQuery">
+		<input id="searchButton" type="submit" value="Pesquisar">
+	</form> -->
+
+	{% if not loggedIn %}
+	<div id="signInButton">
+		<a class="link" href="/loginForm">Entrar</a>
 	</div>
+	{% else %}
+	<div class="dropdown">
+		<button class="dropbtn">Seja muito bem-vindo, <br>{{firstName}}</button>
+		<div class="dropdown-content">
+			<!-- <a href="/account/orders">Seus pedidos</a> -->
+			<a href="/account/profile">Seu perfil</a>
+			<hr>
+			<a href="/logout">Sair</a>
+		</div>
+	</div>
+	{% endif %}
+	<div id="kart">
+		<a class="link" href="/cart">
+			<img src={{url_for('static', filename='images/carrinho2.png')}} id="cartIcon" />
+			Carrinho {{noOfItems}}
+		</a>
+	</div>
+	
+	
 </div>
 <div id="cartItems">
 	<h2>Seus pedidos</h2>
